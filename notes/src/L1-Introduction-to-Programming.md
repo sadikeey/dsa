@@ -14,22 +14,22 @@ date: Oct 24, 2022
 Programming is the process of creating a set of instructions which tells a 
 computer how to perform a task.
 
-## Types Of Languages
+## Types Of Programming Languages
 
 - Low Level Languages.
 - High Level Languages.
 
-### Low Level Languages
+### Low Level Programming Languages
 
-#### Assembly Level Language
+#### Assembly Level Programming Language
 
 Low-level programming that is intended to communicate directly with hardware.
 
-### High Level Languages
+### High Level Programming Languages
 
 Easy to understand and less complex than assembly level language/machine code.
 
-#### Types Of High Level Languages.
+#### Types Of High Level Programming Languages.
 
 - Procedural
 - Functional
@@ -70,18 +70,186 @@ Instance of a class which allows to use variables and methods from class.
 became a new programming language.
 - Developed by **Bjarne Stroustrup** in **1979**.
 
+## C++ Sample Program.
+```cpp
+  #include<iostream>    /*iostream is directive & it is processed by 
+                          preprocessor.
+                          Preprocessor is program that compiler runs.
+                          #include telling our program to include the header 
+                          files like iostream.
+                          iostream containes input output functions.
+                        */
+  using namespace std;  /*It is telling our program that there is namespace of 
+                          name std which we have to use in our program.
+                          e.g cout belongs to std namespace 
+                                - std:cout
+                        */
+  int main() {          /*'int main' is the main function which the entry point 
+                          of a program.*/
+    int val;            //declaring a variable.
+    cout<<"Hello";      //printing the output.
+    cin>>val;           //taking input.
+    cout<<val;          //printing the output.
+    return 0;           //return 0 indicates, program has executed successfully.
+    cout<<"Hi";         //this won't be executed. 
+  }
+```
 
+## C++ Variables
+- Variables are just containers to store our value where our code is executed.
+- As C++ is statically typed language, so you can't store different type of 
+value in different type of container.\
+e.g. 
+```cpp
+    int a = 5;          // correct
+    int b = "f";        // incorrect
+    int e = "6";        // incorrect
+    char c = "a"        // correct
+    char d = "4"        // correct
+```
 
-## Data Structure And Algorithm
+\newpage
 
-It is foundational blocks of a big building named as program.
+## C++ Data Types
+|Primary|Derived|User Defined|
+|---|---|---|
+|Integer|Function|Class|
+|Character|Array|Structure|
+|Boolean|Pointer|Union|
+|Floating Point|Reference|Enum|-|
+|Double Floating Point|-|-|
+|Void|-|-|
+|Wide Character|
 
-### Data Structure
+## C++ Operators
+- Arithmetic Operators
+    - e.g. +, -, *, /, %, ++, -- etc.\
 
-A data structure is a named location that can be used to store and organize 
-data.
+- Relational Operators
+    - e.g. ==, !, >, <, >=, <= etc.\
 
-### Algorithm
-An algorithm is a collection of steps to solve a particular problem.
+- Logical Operators 
+    - e.g. &&, ||, ! etc.\
+    
+- Assignment Operators 
+    - e.g. =, +=, -=, /=, %= etc.\
 
+- Bitwise Operators
+    - e.g. ~, <<, >>, |, &, ^ etc.
+    - a << b = a x 2^b
+    - a >> b = a / 2^b\
 
+- Misc Operators
+    - e.g sizeOf, ?exp1:exp2, comma Operator, dot & arrow Operators, casting 
+      Operator, & Address Operator, * Pointer Operator etc.\
+
+- Uninary Operators
+    - e.g. +, -, ++, --, ! etc.\
+
+\newpage
+
+## Conditionals Statements
+- If else Statements.
+- Nested If else Statements
+- Ternary Statements
+
+### If else Statements
+```cpp
+    if (condition) {
+      // block of code if condition is true
+    }
+    else {
+      // block of code if condition is false
+    }   
+```
+
+### Nested If else Statements
+```cpp
+    if (condition1) {
+      // code block 1
+    }
+    else if (condition2){
+      // code block 2
+    }
+    else {
+      // code block 3
+    }
+```
+
+### Ternary Statements
+
+```cpp
+      int number = -4;
+      string result;
+      // Using ternary operator
+      result = (number > 0) ? "Positive Number!" : "Negative Number!";
+
+```
+
+### Switch Case Statements
+
+```cpp
+    switch (expression) {
+        case x:
+            // code
+            break;
+        case y:
+            // code
+            break;
+        default:
+            // code
+      }
+```
+\newpage
+
+## C++ Loops/Iterative Statements
+Loops are used when you want to do repetitive task in the program.
+
+### Types Of Loops
+- While Loop
+- For Loop
+- Do-while Loop
+
+### While Loop
+
+```cpp
+    while(codition){
+        //code
+      }
+```
+
+### For Loop
+```cpp
+    for (init-statement; condition; final-expression) {
+        //code
+      }
+```
+
+#### Multiple Variables in For Loop
+```cpp
+    for (int i=0, j=4; i<4, j>0; i++, j--) {
+        // code
+      }
+```
+
+### For Loop vs While Loop
+```cpp
+    // For Loop
+    for (init-statement; condition; final-expression) {
+        //code
+      }
+
+    // while Loop
+    init-statement
+    while(condition) {
+        // code
+        final-expression
+      }
+```
+
+### Do-while Loop
+```cpp
+    do {
+        code
+    } while(condition);
+```
