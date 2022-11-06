@@ -36,7 +36,8 @@ Easy to understand and less complex than assembly level language/machine code.
 - Object-Oriented
 
 ##### Procedural:
-- It is written in set of procedures which executes in a structure/serial order.\
+- It is written in set of procedures which executes in a structure/serial 
+order.\
 - Procedures are also known as subroutine/function.\
 - e.g. C, Basic, Pascal etc. 
 
