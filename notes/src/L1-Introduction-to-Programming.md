@@ -254,3 +254,35 @@ Loops are used when you want to do repetitive task in the program.
         code
     } while(condition);
 ```
+
+\newpage
+
+## Function
+
+### How to declare a function.
+```cpp
+    returnType functionName(parameter1, parameter2){
+        // Statements
+      }
+```
+
+### Function Prototype
+Like if you want define your function-A after the function-B but you want to call
+function-B in inside of function-A.\
+
+e.g.
+
+```cpp
+    #include<iostream>
+    using namaspace std;
+
+    int add(int, int);    // prototype
+
+    int main() {
+        cout<<add(2,3)<<endl;
+      }
+
+    int add(int a, int b){
+        return a+b;
+      }
+```
