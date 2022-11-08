@@ -5,6 +5,7 @@ author: "Sadik Saifi"
 date: Oct 24, 2022
 ---
 
+\setcounter{secnumdepth}{5}
 \tableofcontents
 \newpage
 \maketitle
@@ -149,12 +150,12 @@ e.g.
 
 \newpage
 
-## Conditionals Statements
+# Conditionals Statements
 - If else Statements.
 - Nested If else Statements
 - Ternary Statements
 
-### If else Statements
+## If else Statements
 ```cpp
     if (condition) {
       // block of code if condition is true
@@ -164,7 +165,7 @@ e.g.
     }   
 ```
 
-### Nested If else Statements
+## Nested If else Statements
 ```cpp
     if (condition1) {
       // code block 1
@@ -177,7 +178,7 @@ e.g.
     }
 ```
 
-### Ternary Statements
+## Ternary Statements
 
 ```cpp
       int number = -4;
@@ -187,7 +188,7 @@ e.g.
 
 ```
 
-### Switch Case Statements
+## Switch Case Statements
 
 ```cpp
     switch (expression) {
@@ -203,15 +204,15 @@ e.g.
 ```
 \newpage
 
-## C++ Loops/Iterative Statements
+# C++ Loops/Iterative Statements
 Loops are used when you want to do repetitive task in the program.
 
-### Types Of Loops
+## Types Of Loops
 - While Loop
 - For Loop
 - Do-while Loop
 
-### While Loop
+## While Loop
 
 ```cpp
     while(codition){
@@ -219,21 +220,21 @@ Loops are used when you want to do repetitive task in the program.
       }
 ```
 
-### For Loop
+## For Loop
 ```cpp
     for (init-statement; condition; final-expression) {
         //code
       }
 ```
 
-#### Multiple Variables in For Loop
+### Multiple Variables in For Loop
 ```cpp
     for (int i=0, j=4; i<4, j>0; i++, j--) {
         // code
       }
 ```
 
-### For Loop vs While Loop
+## For Loop vs While Loop
 ```cpp
     // For Loop
     for (init-statement; condition; final-expression) {
@@ -248,7 +249,7 @@ Loops are used when you want to do repetitive task in the program.
       }
 ```
 
-### Do-while Loop
+## Do-while Loop
 ```cpp
     do {
         code
@@ -257,18 +258,18 @@ Loops are used when you want to do repetitive task in the program.
 
 \newpage
 
-## Function
+# Function
 
-### How to declare a function.
+## How to declare a function.
 ```cpp
     returnType functionName(parameter1, parameter2){
         // Statements
       }
 ```
 
-### Function Prototype
-Like if you want define your function-A after the function-B but you want to call
-function-B in inside of function-A.\
+## Function Prototype
+Like if you want define your function-A after the function-B but you want to 
+call function-B in inside of function-A.\
 
 e.g.
 
@@ -286,3 +287,105 @@ e.g.
         return a+b;
       }
 ```
+
+## Scope of Variables
+
+### Accessing global variable.
+We access the global variable by using **scope resolution** operator (::).
+
+e.g.
+```cpp
+    #include<iostream>
+    using namespace std;
+
+    int a = 6;
+    int main() {
+        int a = 5;
+        cout<<a<<endl;      //5
+        cout<<::a<<endl;    //6
+    }
+```
+
+\newpage
+
+## Parameters
+
+### Formal Parameters & Actual Parameters.
+```cpp
+    #include<iostream>
+    using namaspace std;
+
+    void add(int param1, int param2){ // param1 & param2 are formal parameters.
+        cout<<param1+param2<<endl;
+    }
+
+    int main() {
+        int a = 5; 
+        int b = 7;    // Actual parameters. 
+        add();
+    }
+```
+
+## Pass by Value and Pass by Reference.
+
+### Pass by Value.
+Copy of the actual variable get copied into the formal variable.\
+
+e.g.
+```cpp
+    #include<iostream>
+    using namespace std;
+
+    void add(int param1, int param2){ // param1 & param2 are formal parameters.
+        cout<<param1+param2<<endl;
+    }
+    int main() {
+        int a = 5; 
+        int b = 7;    // Actual parameters. 
+        add(a,b);
+    }
+```
+
+### Pass by Reference.
+Variables it self gets used in the function. 
+
+e.g.
+```cpp
+    #include <iostream>
+    using namespace std;
+
+    void print(int &param) { 
+      cout << param << endl;
+      param = 2;
+    }
+    int main() {
+      int a = 5;
+
+      print(a);
+      cout<<a<<endl;
+    }
+```
+
+\newpage
+
+### Default values of parameters in a function.
+
+```cpp
+    #include<iostream>
+    using namaspace std;
+
+    void add(int a, int b=0, int c=2){  // b & c default values
+        return a+b+c;
+    }
+
+    int main() {
+        add(3);     // 5
+        add(3,2)    // 7
+        add(3,2,3)  // 8
+    }
+```
+
+\newpage
+
+# Array
+An array is data structure which stores a collection of items.\
