@@ -5,7 +5,7 @@ author: "Sadik Saifi"
 date: Oct 24, 2022
 ---
 
-\setcounter{secnumdepth}{5}
+\setcounter{secnumdepth}{3}
 \tableofcontents
 \newpage
 \maketitle
@@ -388,4 +388,38 @@ e.g.
 \newpage
 
 # Array
-An array is data structure which stores a collection of items.\
+- An array is data structure which stores a collection of items.\
+- It store homogeneous items(same data type).\
+- It has contiguous memory.\
+- **Representation of Array**\
+  - |1|2|3|4|5|
+  - Length of this array is 5.\
+- We access the elements by their indexes(starts from 0).\
+
+## Syntax Of An Array 
+```cpp
+    // datatype arrayName[arraySize];
+    int array[5];
+```
+## Array Literal
+```cpp
+    int array[] = { 1, 2, 3, 4, 5 };
+```
+
+## Types Of Array
+
+- Single dimensional or One-dimensional array.
+- Multidimensional array.
+
+## Sample Array Program
+```cpp
+    #include<iostream>
+    using namespace std;
+
+    int main() {
+      int array[] = {1, 2, 3, 4, 5};
+
+      cout << sizeOf(array) << endl;                  //size of the array.
+      cout << sizeOf(array)/sizeOf(array[0]) << endl; //length of the array.
+    }
+```
