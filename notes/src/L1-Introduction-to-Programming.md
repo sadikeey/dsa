@@ -419,7 +419,11 @@ e.g.
     int main() {
       int array[] = {1, 2, 3, 4, 5};
 
-      cout << sizeOf(array) << endl;                  //size of the array.
-      cout << sizeOf(array)/sizeOf(array[0]) << endl; //length of the array.
+      cout << sizeOf(array) << endl;                  // size of the array.
+                                                      // 20 bits.
+      cout << sizeOf(array[0]) << endl;               // size of an elements 
+                                                      // 4 bits
+      cout << sizeOf(array)/sizeOf(array[0]) << endl; // length of the array.
+                                                      // 5
     }
 ```
