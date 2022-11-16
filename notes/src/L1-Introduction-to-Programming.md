@@ -1,6 +1,6 @@
 
 ---
-title: C++ Programming
+title: DSA using C++
 author: "Sadik Saifi"
 date: Oct 24, 2022
 ---
@@ -387,7 +387,10 @@ e.g.
 
 \newpage
 
-# Array
+# Data Structures
+
+## Array
+- Array
 - An array is data structure which stores a collection of items.\
 - It store homogeneous items(same data type).\
 - It has contiguous memory.\
@@ -396,22 +399,23 @@ e.g.
   - Length of this array is 5.\
 - We access the elements by their indexes(starts from 0).\
 
-## Syntax Of An Array 
+### Syntax Of An Array 
 ```cpp
     // datatype arrayName[arraySize];
     int array[5];
 ```
-## Array Literal
+
+### Array Literal
 ```cpp
     int array[] = { 1, 2, 3, 4, 5 };
 ```
 
-## Types Of Array
+### Types Of Array
 
 - Single dimensional or One-dimensional array.
 - Multidimensional array.
 
-## Sample Array Program
+### Sample Array Program
 ```cpp
     #include<iostream>
     using namespace std;
@@ -425,5 +429,110 @@ e.g.
                                                       // 4 bits
       cout << sizeOf(array)/sizeOf(array[0]) << endl; // length of the array.
                                                       // 5
+    }
+```
+
+\newpage
+
+## Vectors
+- Vectors are dynamic arrays.
+
+### Basic operations in Vectors
+
+1. **Declaration**
+```cpp
+      #include <iostream>
+      #include <vector>
+      using namespace std;
+
+      int main() {
+        vector<int> vec(4);
+      }
+```
+
+2. **Size**
+    - v.size() -> length\
+
+3. **Resize**
+    - v.resize(new size)\
+
+4. **Capacity**
+    - v.capacity()
+    - Capacity gets increased in multiple of 2's.\
+
+5. **Add Elements**
+    - v.push_back(5);\
+
+6. **Insert Elements**
+    - v.insert(position, elements)\
+
+7. **Beginning and end of a Vector**
+    - v.begin()
+    - v.end()\
+
+8. **Delete Elements**
+    - v.pop_back()\
+
+9. **Delete Elements using index**
+    - v.erase(position)\
+
+10. **Delete All Elements**
+    - v.clear()\
+
+\newpage
+
+11. **Taking input from user**
+```cpp
+    #include<iostream>
+    #include<vector>
+    using namespace std; 
+
+    int main(){
+      vector<int> v;
+      for(int i=0; i<5; i++){
+        int element; 
+        cin>>element;
+        v.push_back(element);
+      }
+    }
+```
+
+### Sample Program Of Vector 
+```cpp
+    #include <iostream>
+    #include <vector>
+    using namespace std;
+
+    int main() {
+      vector<int> v;
+
+      // Adding Elements
+      v.push_back(1);
+      v.push_back(2);
+      v.push_back(3);
+      v.push_back(4);
+      v.push_back(5);
+
+      cout << "Size : " << v.size() << endl;         // Size Of vector
+      cout << "Capacity : " << v.capacity() << endl; // Capacity Of vector
+
+      cout << "Elements : ";
+      for (int i = 0; i < v.size(); i++)
+        cout << v[i] << " "; // Printing the elements
+
+      v.resize(10);                 // Resize the vector.
+      cout << endl << "After Resize : " << v.size() << endl;
+
+      v.insert(v.begin() + 1, 0);
+
+      cout << "Elements : ";
+      for (int i = 0; i < v.size(); i++)
+        cout << v[i] << " "; // Printing the elements
+
+      v.erase(v.begin() + 2);
+
+      cout << "Elements : ";
+      for (int i = 0; i < v.size(); i++)
+        cout << v[i] << " "; // Printing the elements
     }
 ```
